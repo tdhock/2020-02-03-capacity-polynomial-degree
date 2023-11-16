@@ -1,0 +1,666 @@
+{
+ "geoms": {
+ "geom1_point_funs": {
+ "geom": "point",
+"classed": "geom1_point_funs",
+"aes": {
+ "x": "x",
+"y": "y",
+"colour": "set",
+"showSelectedlegendcolour": "set" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"shape":        1,
+"fill": "transparent",
+"size":        4,
+"stroke":        1 
+},
+"types": {
+ "colour": "rgb",
+"x": "numeric",
+"y": "numeric",
+"showSelectedlegendcolour": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelectedlegendcolour" 
+],
+"subset_order": [
+ "showSelectedlegendcolour" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom2_line_funs": {
+ "geom": "line",
+"classed": "geom2_line_funs",
+"aes": {
+ "x": "x",
+"y": "pred.thresh",
+"key": "pred",
+"showSelected1": "degree" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"colour": "#0000FF",
+"showSelected": "degree" 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"key": "character",
+"showSelected1": "integer",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [
+ "degree" 
+],
+"nest_order": [],
+"subset_order": [],
+"columns": {
+ "common": [
+ "x",
+"key",
+"group" 
+] 
+},
+"chunks": {
+ "0": 1,
+"1": 2,
+"2": 3,
+"3": 4,
+"4": 5,
+"5": 6,
+"6": 7,
+"7": 8,
+"8": 9,
+"9": 10 
+},
+"total": 10 
+},
+"geom3_line_error": {
+ "geom": "line",
+"classed": "geom3_line_error",
+"aes": {
+ "x": "degree",
+"y": "log10(mse.thresh)",
+"colour": "set",
+"group": "set",
+"showSelectedlegendcolour": "set" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false 
+},
+"types": {
+ "colour": "rgb",
+"x": "numeric",
+"y": "numeric",
+"group": "character",
+"showSelectedlegendcolour": "character",
+"PANEL": "integer" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelectedlegendcolour",
+"group" 
+],
+"subset_order": [
+ "showSelectedlegendcolour" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom4_point_error": {
+ "geom": "point",
+"classed": "geom4_point_error",
+"aes": {
+ "x": "degree",
+"y": "log10(mse.thresh)",
+"colour": "set",
+"showSelectedlegendcolour": "set" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"shape":        1,
+"fill": "#FFFFFF" 
+},
+"types": {
+ "colour": "rgb",
+"x": "numeric",
+"y": "numeric",
+"showSelectedlegendcolour": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelectedlegendcolour" 
+],
+"subset_order": [
+ "showSelectedlegendcolour" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom5_tallrect_error": {
+ "geom": "tallrect",
+"classed": "geom5_tallrect_error",
+"aes": {
+ "key": "key",
+"xmin": "min",
+"xmax": "max",
+"clickSelects.variable": "var",
+"clickSelects.value": "click.val",
+"showSelected.variable": "var",
+"showSelected.value": "show.val" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"alpha":      0.5,
+"colour": "transparent",
+"fill": "#0000FF",
+"showSelected": "show.val",
+"clickSelects": "click.val" 
+},
+"types": {
+ "xmin": "numeric",
+"xmax": "numeric",
+"key": "character",
+"clickSelects.variable": "character",
+"clickSelects.value": "integer",
+"showSelected.variable": "character",
+"showSelected.value": "integer",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected.variable",
+"showSelected.value" 
+],
+"subset_order": [
+ "showSelected.variable" 
+],
+"chunks": 1,
+"total": 1 
+} 
+},
+"duration": {
+ "degree":     1000 
+},
+"selectors": {
+ "set": {
+ "type": "multiple",
+"legend": true,
+"is.variable.value": false,
+"showSelected": true,
+"selected": [ "test", "train" ],
+"levels": [ "test", "train" ],
+"update": [
+ "geom1_point_funs",
+"geom3_line_error",
+"geom4_point_error" 
+] 
+},
+"degree": {
+ "is.variable.value": true,
+"type": "single",
+"showSelected": true,
+"chunks": "degree",
+"clickSelects": true,
+"selected": "0",
+"update": [
+ "geom2_line_funs",
+"geom5_tallrect_error" 
+],
+"duration":     1000 
+} 
+},
+"plots": {
+ "funs": {
+ "panel_margin_lines":     0.25,
+"legend": {
+ "set": {
+ "guide": "legend",
+"geoms": "point",
+"title": "set",
+"class": "set",
+"selector": "set",
+"is_discrete": true,
+"legend_type": "colour",
+"text_size": "8.8pt",
+"title_size": "11pt",
+"entries": [
+ {
+ "pointcolour": "#FF0000",
+"pointshape":        1,
+"pointsize":        4,
+"pointstroke":        1,
+"label": "test" 
+},
+{
+ "pointcolour": "#000000",
+"pointshape":        1,
+"pointsize":        4,
+"pointstroke":        1,
+"label": "train" 
+} 
+] 
+} 
+},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":        0,
+"right":        0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [        1 ],
+"height_proportion": [        1 ] 
+},
+"panel_background": {
+ "fill": "#EBEBEB",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": [],
+"grid_major": {
+ "colour": "#FFFFFF",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -5,
+    -2.5,
+       0,
+     2.5,
+       5 
+] 
+],
+"y": [
+ [
+        0,
+      10,
+      20,
+      30 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FFFFFF",
+"size":     0.25,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -5,
+   -3.75,
+    -2.5,
+   -1.25,
+       0,
+    1.25,
+     2.5,
+    3.75,
+       5 
+] 
+],
+"y": [
+ [
+       -5,
+       0,
+       5,
+      10,
+      15,
+      20,
+      25,
+      30 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+       -5,
+    -2.5,
+       0,
+     2.5,
+       5 
+],
+"xlab": [
+ "-5.0",
+"-2.5",
+"0.0",
+"2.5",
+"5.0" 
+],
+"xrange": [     -5.5,      5.5 ],
+"xline": true,
+"xticks": true,
+"y": [
+        0,
+      10,
+      20,
+      30 
+],
+"ylab": [
+ "0",
+"10",
+"20",
+"30" 
+],
+"yrange": [ -6.291317, 30.72081 ],
+"yline": true,
+"yticks": true 
+},
+"xtitle": "input/feature",
+"strip_text_xsize": "11pt",
+"xsize": "11pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "output/label",
+"strip_text_ysize": "11pt",
+"ysize": "11pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "-5.0",
+"-2.5",
+"0.0",
+"2.5",
+"5.0" 
+],
+"ylabs": [
+ "0",
+"10",
+"20",
+"30" 
+],
+"title_size": "13.2pt",
+"options": {
+ "width":      400,
+"height":      400 
+},
+"geoms": [
+ "geom1_point_funs",
+"geom2_line_funs" 
+] 
+},
+"error": {
+ "panel_margin_lines":     0.25,
+"legend": {
+ "set": {
+ "guide": "legend",
+"geoms": [ "path", "point" ],
+"title": "set",
+"class": "set",
+"selector": "set",
+"is_discrete": true,
+"legend_type": "colour",
+"text_size": "8.8pt",
+"title_size": "11pt",
+"entries": [
+ {
+ "pathcolour": "#FF0000",
+"pathsize":      0.5,
+"pathlinetype":        1,
+"label": "test",
+"pointcolour": "#FF0000",
+"pointshape":        1,
+"pointsize":      1.5,
+"pointfill": "#FFFFFF",
+"pointstroke":      0.5 
+},
+{
+ "pathcolour": "#000000",
+"pathsize":      0.5,
+"pathlinetype":        1,
+"label": "train",
+"pointcolour": "#000000",
+"pointshape":        1,
+"pointsize":      1.5,
+"pointfill": "#FFFFFF",
+"pointstroke":      0.5 
+} 
+] 
+} 
+},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":        0,
+"right":        0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [        1 ],
+"height_proportion": [        1 ] 
+},
+"panel_background": {
+ "fill": "#EBEBEB",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": [],
+"grid_major": {
+ "colour": "#FFFFFF",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9 
+] 
+],
+"y": [
+ [
+       -1,
+       0,
+       1,
+       2,
+       3,
+       4,
+       5 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FFFFFF",
+"size":     0.25,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -1,
+    -0.5,
+       0,
+     0.5,
+       1,
+     1.5,
+       2,
+     2.5,
+       3,
+     3.5,
+       4,
+     4.5,
+       5,
+     5.5,
+       6,
+     6.5,
+       7,
+     7.5,
+       8,
+     8.5,
+       9,
+     9.5,
+      10 
+] 
+],
+"y": [
+ [
+       -1,
+    -0.5,
+       0,
+     0.5,
+       1,
+     1.5,
+       2,
+     2.5,
+       3,
+     3.5,
+       4,
+     4.5,
+       5 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+        0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9 
+],
+"xlab": [
+ "0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8",
+"9" 
+],
+"xrange": [       -1,       10 ],
+"xline": true,
+"xticks": true,
+"y": [
+       -1,
+       0,
+       1,
+       2,
+       3,
+       4,
+       5 
+],
+"ylab": [
+ "-1",
+"0",
+"1",
+"2",
+"3",
+"4",
+"5" 
+],
+"yrange": [ -1.343085, 5.160366 ],
+"yline": true,
+"yticks": true 
+},
+"xtitle": "polynomial degree",
+"strip_text_xsize": "11pt",
+"xsize": "11pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "log10(mean squared error)",
+"strip_text_ysize": "11pt",
+"ysize": "11pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8",
+"9" 
+],
+"ylabs": [
+ "-1",
+"0",
+"1",
+"2",
+"3",
+"4",
+"5" 
+],
+"title_size": "13.2pt",
+"options": {
+ "width":      400,
+"height":      400 
+},
+"geoms": [
+ "geom3_line_error",
+"geom4_point_error",
+"geom5_tallrect_error" 
+] 
+} 
+},
+"title": "Overfitting using linear model polynomial degree",
+"source": "https://github.com/tdhock/cs499-spring2020/blob/master/2020-02-03-capacity/figure-quadratic-interactive.R" 
+}
